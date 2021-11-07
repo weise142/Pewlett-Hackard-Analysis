@@ -152,13 +152,13 @@ ON departments.dept_no = dept_manager.dept_no;
 
 -- shortened less clustered method of the code executed above
 
-SELECT d.dept_name,
+SELECT dept.dept_name,
      dm.emp_no,
      dm.from_date,
      dm.to_date
-FROM departments as d
+FROM departments as dept
 INNER JOIN dept_manager as dm
-ON d.dept_no = dm.dept_no;	 
+ON dept.dept_no = dm.dept_no;	 
 
 -- Use Left Join for retirement_info and dept_emp tables
 
